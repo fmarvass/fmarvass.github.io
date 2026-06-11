@@ -11269,3 +11269,17 @@ body,
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+
+/* Ajuste de botones para pantallas de celulares */
+@media (max-width: 576px) {
+  /* Forzamos a que los botones se apilen uno abajo del otro si no entran cómodos */
+  #home .btn, 
+  #home a {
+    display: inline-block !important;
+    min-width: 160px !important;
+    padding: 10px 15px !important;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important; /* Evita que el texto del botón se parta en dos renglones */
+    margin: 8px auto !important;
+  }
+}
