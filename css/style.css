@@ -11239,3 +11239,18 @@ h1.portfolio-hero-title,
   line-height: 1.1 !important;
   paint-order: stroke fill !important;
 }
+
+/* Ajuste de tamaño de texto para celulares */
+@media (max-width: 768px) {
+  h1.portfolio-hero-title, 
+  .portfolio-hero-title {
+    font-size: 2.3rem !important; /* Achica el texto en móviles para que no se corte */
+    letter-spacing: 2px !important;
+  }
+}
+
+/* Evita el scroll horizontal y los bordes blancos en móviles */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
