@@ -11217,16 +11217,25 @@ h6,
   background: white;
 }
 
-/* Corrección del título calado para el Hero */
+/* Forzar contorno blanco brillante anulando cualquier estilo previo */
+h1.portfolio-hero-title, 
 .portfolio-hero-title {
   font-family: 'Arial Black', Gadget, sans-serif !important;
   font-weight: 900 !important;
-  text-transform: uppercase;
-  -webkit-text-stroke: 1.5px #ffffff;
+  text-transform: uppercase !important;
+  
+  /* Forzamos el contorno blanco con máxima prioridad */
+  stroke: #ffffff !important;
+  -webkit-text-stroke-color: #ffffff !important;
+  -webkit-text-stroke-width: 1.5px !important;
+  
+  /* Aseguramos el relleno transparente */
   -webkit-text-fill-color: transparent !important;
   color: transparent !important;
-  font-size: 4.2rem;
-  letter-spacing: 5px !important; /* Separa las letras para que no se pisen */
-  line-height: 1.1;
-  paint-order: stroke fill !important; /* Limpia los trazos internos de las fuentes */
+  
+  /* Ajustes de espacio e impacto visual */
+  font-size: 4.2rem !important;
+  letter-spacing: 5px !important;
+  line-height: 1.1 !important;
+  paint-order: stroke fill !important;
 }
