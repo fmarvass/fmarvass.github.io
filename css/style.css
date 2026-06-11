@@ -11329,3 +11329,22 @@ body,
     font-size: 0.9rem !important;
   }
 }
+
+/* Ajuste para los títulos gigantes decorativos de fondo en celulares */
+@media (max-width: 768px) {
+  /* Achicamos la tipografía gigante para que la palabra entre entera en la pantalla del celular */
+  .position-relative h1.display-1,
+  .position-relative .display-1,
+  [class*="display-"] {
+    font-size: 3.5rem !important; /* Pasamos de 10rem a 3.5rem para que no desborde */
+    letter-spacing: 1px !important;
+    opacity: 0.15 !important; /* La hacemos un poquito más sutil para que no compita con el texto principal */
+  }
+
+  /* Centramos bien los títulos superpuestos */
+  .position-absolute {
+    width: 100% !important;
+    left: 0 !important;
+    text-align: center !important;
+  }
+}
