@@ -11240,17 +11240,32 @@ h1.portfolio-hero-title,
   paint-order: stroke fill !important;
 }
 
-/* Ajuste de tamaño de texto para celulares */
+/* ==========================================
+   ARREGLO DEFINITIVO PARA MÓVILES Y OVERFLOW
+   ========================================== */
+
+/* Ajuste de tamaño de texto para celulares (¡Este dejalo!) */
 @media (max-width: 768px) {
   h1.portfolio-hero-title, 
   .portfolio-hero-title {
-    font-size: 2.3rem !important; /* Achica el texto en móviles para que no se corte */
+    font-size: 2.3rem !important; 
     letter-spacing: 2px !important;
   }
 }
 
-/* Evita el scroll horizontal y los bordes blancos en móviles */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
+/* Bloqueo estricto de desbordamiento horizontal en toda la estructura */
+html, 
+body, 
+#home, 
+.container-fluid, 
+.row {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Corrige los márgenes internos que Bootstrap mete por defecto */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
