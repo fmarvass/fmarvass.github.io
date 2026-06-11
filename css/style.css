@@ -11330,21 +11330,23 @@ body,
   }
 }
 
-/* Ajuste para los títulos gigantes decorativos de fondo en celulares */
+/* Ajuste calibrado para los títulos gigantes decorativos de fondo en celulares */
 @media (max-width: 768px) {
-  /* Achicamos la tipografía gigante para que la palabra entre entera en la pantalla del celular */
   .position-relative h1.display-1,
   .position-relative .display-1,
   [class*="display-"] {
-    font-size: 3.5rem !important; /* Pasamos de 10rem a 3.5rem para que no desborde */
+    font-size: 5rem !important; /* Lo subimos a 5rem para que sea más grande que el texto de adelante */
     letter-spacing: 1px !important;
-    opacity: 0.15 !important; /* La hacemos un poquito más sutil para que no compita con el texto principal */
+    opacity: 0.25 !important; /* Le subimos la opacidad para que se note el contorno */
+    line-height: 1 !important;
   }
 
-  /* Centramos bien los títulos superpuestos */
+  /* Aseguramos que se mantenga perfectamente centrado de fondo */
   .position-absolute {
     width: 100% !important;
-    left: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; /* Centrado matemático perfecto */
+    top: 50% !important;
     text-align: center !important;
   }
 }
