@@ -11377,3 +11377,35 @@ body,
     padding-left: 30px !important; 
   }
 }
+
+/* Reemplazá el bloque de tu título para que quede así */
+h1.portfolio-hero-title, 
+.portfolio-hero-title {
+  font-family: 'Montserrat', sans-serif !important; /* Cambiamos a la fuente web importada */
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  
+  /* Contorno blanco brillante */
+  stroke: #ffffff !important;
+  -webkit-text-stroke-color: #ffffff !important;
+  -webkit-text-stroke-width: 1.5px !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  
+  /* Ajustes de tamaño globales */
+  font-size: 4.2rem !important;
+  letter-spacing: 3px !important; /* Espacio calibrado para Montserrat */
+  line-height: 1.1 !important;
+  paint-order: stroke fill !important;
+}
+
+/* Y dentro de tu @media de celulares, asegurate de que también la use: */
+@media (max-width: 768px) {
+  h1.portfolio-hero-title, 
+  .portfolio-hero-title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 2.3rem !important; 
+    letter-spacing: 2px !important;
+  }
+}
+
