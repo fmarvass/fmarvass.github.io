@@ -11350,3 +11350,30 @@ body,
     text-align: center !important;
   }
 }
+
+/* =======================================================
+   CORRECCIÓN DE PUNTOS FLOTANTES EN LA LÍNEA DE TIEMPO
+   ======================================================= */
+@media (max-width: 991px) {
+  
+  /* Corregimos el error anterior quitando el !important del padding de las columnas */
+  .row > [class*="col-"] {
+    padding-left: inherit !important; 
+    padding-right: inherit !important;
+  }
+
+  /* Ajustamos la posición de los puntos de la plantilla en pantallas chicas */
+  .qualification-item::before,
+  .timeline-item::before,
+  [class*="-point"],
+  [class*="-dot"] {
+    left: -15px !important; /* Mueve el puntito hacia la izquierda, fuera del texto */
+    z-index: 10;
+  }
+  
+  /* Le damos espacio al texto para que no toque la línea vertical */
+  .qualification-item, 
+  .timeline-item {
+    padding-left: 30px !important; 
+  }
+}
